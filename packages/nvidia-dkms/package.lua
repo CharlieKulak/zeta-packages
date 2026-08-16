@@ -23,7 +23,7 @@ return {
     -- dkms install refuses a tree with no directory for the target kernel.
     p:run("mkdir -p " .. p.install_root .. "/lib/modules/$(uname -r)")
 
-    p:run("dkms build -m nvidia -v 595.71.05 -k $(uname -r) --dkms-tree "
+    p:run("dkms build -m nvidia -v 595.71.05 -k $(uname -r) --dkmstree "
       .. p.install_root .. "/var/lib/dkms --sourcetree "
       .. p.install_root .. "/usr/src --kernelsourcedir /lib/modules/$(uname -r)/build")
 
@@ -38,7 +38,7 @@ return {
       .. " && touch " .. p.install_root
       .. "/lib/modules/$(uname -r)/kernel/drivers/video/\"$b\"")
 
-    p:run("dkms install -m nvidia -v 595.71.05 -k $(uname -r) --dkms-tree "
+    p:run("dkms install -m nvidia -v 595.71.05 -k $(uname -r) --dkmstree "
       .. p.install_root .. "/var/lib/dkms --installtree "
       .. p.install_root .. "/lib/modules --kernelsourcedir /lib/modules/$(uname -r)/build --no-depmod")
   end,
