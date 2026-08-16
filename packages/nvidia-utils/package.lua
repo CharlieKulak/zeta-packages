@@ -1,9 +1,9 @@
 return {
   name    = "nvidia-utils",
   version = "595.71.05",
-  summary = "NVIDIA official driver userspace (vendor GL/EGL/GLES/Vulkan libs, tools, Xorg modules)",
+  summary = "NVIDIA official driver userspace (vendor GL/EGL/GLES/Vulkan libs, tools, Xorg modules, boot-time module loading)",
   url     = "https://raw.githubusercontent.com/gretagen/zeta-packages/refs/heads/main/packages/nvidia-utils/nvidia-utils-595.71.05.tar.xz",
-  sha256  = "fd920773560047c9b9a31ec628491df5afecc898daebad6ad06809e4776f1650",
+  sha256  = "63ea465fec9761af7c02add3147de40fe6261286a64f537e13856ba593a4eb24",
   deps    = { "libglvnd", "nvidia-firmware" },
   archive = { strip = 1 },
   test    = function(p)
