@@ -6,8 +6,11 @@ return {
   sha256  = "2066a2521adb8030905f4340ee9a788d04284c18390f78f1e0a0aafdaa0dd249",
   deps    = { "dkms", "make" },
   build   = function(p)
-    -- Install the module source tree where dkms expects it.
-    p:install("nvidia-595.71.05", "/usr/src/nvidia-595.71.05")
+    -- Zeta unpacks the payload and cds into its single top-level directory
+    -- before this runs, so the module source tree is the CWD. Install it
+    -- where dkms expects it.
+    p:run("mkdir -p " .. p.install_root .. "/usr/src")
+    p:run("cp -a . " .. p.install_root .. "/usr/src/nvidia-595.71.05")
 
     -- Stage the dkms tree under install_root so Zeta persists it: the
     -- distro's dkms boot service then finds the registered module in
