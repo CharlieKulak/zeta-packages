@@ -15,6 +15,7 @@ return {
   { name = "binutils", version = "2.47", summary = "GNU binary tools (as, ld, ar, objdump, ...) — required to compile and link kernel modules" },
   { name = "bitstreamvera", version = "1.10", summary = "Bitstream Vera TrueType fonts" },
   { name = "bottom", version = "0.14.8", summary = "Graphical process/system monitor for the terminal" },
+  { name = "brightnessctl", version = "0.5.1", summary = "Command-line utility to read and control device brightness" },
   { name = "broot", version = "1.58.0", summary = "A new way to see and navigate directory trees" },
   { name = "brotli", version = "1.2.0", summary = "Brotli compression library" },
   { name = "btop", version = "1.4.7", summary = "Resource monitor (bpytop ported to C++)" },
