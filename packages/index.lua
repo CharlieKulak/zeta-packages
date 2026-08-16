@@ -198,6 +198,7 @@ return {
   { name = "libreoffice-core", version = "26.2.4.2", summary = "LibreOffice runtime (soffice, VCL, bundled libs)" },
   { name = "libreoffice-help", version = "26.2.4.2", summary = "LibreOffice offline help" },
   { name = "libreoffice-share", version = "26.2.4.2", summary = "LibreOffice shared data (templates, config, gallery)" },
+  { name = "librewolf", version = "146.0.1-1", summary = "Privacy-focused Firefox fork (standalone build)" },
   { name = "librsvg", version = "2.60.0", summary = "SVG rendering library (rsvg)" },
   { name = "libseccomp", version = "2.6.0", summary = "High-level interface to the Linux seccomp syscall filter" },
   { name = "libshout", version = "3.2.0", summary = "Icecast streaming library" },
