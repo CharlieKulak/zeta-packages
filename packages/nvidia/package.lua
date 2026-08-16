@@ -15,7 +15,10 @@ return {
     p:run("cat > " .. mpd .. "/nvidia.conf <<'NVEOF'\n# NVIDIA official driver: disable the reverse-engineered nouveau driver\nblacklist nouveau\noptions nouveau modeset=0\n# Kernel modesetting is required for Wayland\noptions nvidia-drm modeset=1\nNVEOF")
 
     -- Detect nouveau and switch over to nvidia immediately when possible.
+    -- (p:run prefixes `cd … && TMPDIR=… PATH=… `; a leading `if` would be a
+    -- syntax error after those env assignments, so start with a no-op.)
     p:run([[
+true
 if lsmod 2>/dev/null | grep -q '^nouveau'; then
   echo '[nvidia] nouveau detected (loaded): removing it'
   if rmmod nouveau 2>/dev/null; then
