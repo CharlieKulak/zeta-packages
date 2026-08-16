@@ -4,8 +4,11 @@ return {
   summary = "NVIDIA official open GPU kernel modules via DKMS (rebuilt automatically on kernel updates)",
   url     = "https://raw.githubusercontent.com/gretagen/zeta-packages/refs/heads/main/packages/nvidia-dkms/nvidia-dkms-595.71.05.tar.xz",
   sha256  = "2066a2521adb8030905f4340ee9a788d04284c18390f78f1e0a0aafdaa0dd249",
-  deps    = { "dkms", "make" },
+  deps    = { "dkms", "make", "gcc", "binutils", "linux-headers-6.16", "linux-headers-7.1.8" },
   build   = function(p)
+    -- Auto-detect the running kernel and require its headers to be present.
+    p:run("test -d /lib/modules/$(uname -r)/build || { echo 'nvidia-dkms: no kernel headers for $(uname -r); install the linux-headers package matching your kernel'; exit 1; }")
+
     -- Zeta unpacks the payload and cds into its single top-level directory
     -- before this runs, so the module source tree is the CWD. Install it
     -- where dkms expects it.
