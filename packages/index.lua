@@ -58,6 +58,7 @@ return {
   { name = "faad2", version = "2.11.2", summary = "AAC decoder library" },
   { name = "fastfetch", version = "2.66.0", summary = "Fast, feature-rich system information fetcher (neofetch successor)" },
   { name = "fd", version = "10.2.0", summary = "Simple find alternative" },
+  { name = "feh", version = "3.12.2", summary = "Fast and lightweight image viewer" },
   { name = "femboysay", version = "0.1.0", summary = "an intuitive tool, for them" },
   { name = "fftw3", version = "3.3.11", summary = "Fastest Fourier Transform in the West (double precision)" },
   { name = "figlet", version = "2.2.5", summary = "Program for making large letters out of ordinary text" },
