@@ -31,6 +31,7 @@ return {
   { name = "cjson", version = "1.7.19", summary = "Ultralightweight JSON parser for C (used by mango)" },
   { name = "cmatrix", version = "2.0", summary = "C Matrix (The Matrix) terminal screen saver" },
   { name = "composefs", version = "1.0.8", summary = "Composable, immutable, content-addressed filesystem (and library)" },
+  { name = "cpufetch", version = "1.07", summary = "Simple CPU architecture information tool" },
   { name = "cpio", version = "2.15", summary = "GNU cpio: a program to manage archives of files" },
   { name = "ctwm", version = "4.1.0", summary = "Window manager based on TWM (with virtual workspaces)" },
   { name = "cups", version = "2.4.19", summary = "Standards-based open source printing system" },
